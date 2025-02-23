@@ -14,6 +14,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => 
 options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<ApplicationDbContext>();
 
+builder.Services.AddSingleton<ApplicationUser>();
+
 builder.Services.AddCors(options => //Method 1 to add policy
 {
     options.AddDefaultPolicy(

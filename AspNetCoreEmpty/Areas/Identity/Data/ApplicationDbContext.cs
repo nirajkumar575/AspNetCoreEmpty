@@ -1,4 +1,5 @@
 ﻿using AspNetCoreEmpty.Areas.Identity.Data;
+using AspNetCoreEmpty.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -12,6 +13,13 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
         : base(options)
     {
     }
+    public virtual DbSet<ApplicationUser> ApplicationUsers { get; set; }
+    public virtual DbSet<ProductModel> Products { get; set; }
+
+
+
+
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

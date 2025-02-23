@@ -10,23 +10,30 @@ namespace AspNetCoreEmpty.Controllers
         {
             _applicationUser = applicationUser;
         }
-        [HttpGet]
+        
         public IActionResult Index()
         {
+
+            //var user = new ApplicationUser()
+            //{
+            //    FirstName = _applicationUser.FirstName,
+            //    LastName = _applicationUser.LastName,
+            //    Email = _applicationUser.Email
+            //};
             return View();
 
         }
-        [HttpPost]
-        public IActionResult Index(ApplicationUser applicationUser)
+        public IActionResult Privacy()
         {
-            var user = new ApplicationUser()
-            {
-                FirstName = _applicationUser.FirstName,
-                LastName = _applicationUser.LastName,
-                Email = _applicationUser.Email
-            };
-            return View(user);
-
+            return View();
+        }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
         }
 
     }
