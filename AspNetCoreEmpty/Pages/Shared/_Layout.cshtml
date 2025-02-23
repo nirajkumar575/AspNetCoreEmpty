@@ -30,6 +30,18 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+<<<<<<< Updated upstream
+=======
+                
+                <a class="navbar-brand" @Html.ActionLink("Services","Services","Home")></a>
+                <a class="navbar-brand" @Html.ActionLink("product", "Services", "Home")>product</a>
+                <a class="navbar-brand" @Html.ActionLink("contact", "Services", "Home")></a>
+                <a class="navbar-brand" @Html.ActionLink("about", "Services", "Home")></a>
+				<a class="navbar-brand" @Html.ActionLink("about", "Services", "Home")>blog</a>
+                <a class="navbar-brand" @Html.ActionLink("Services", "Services", "Home")>FAQ.</a>
+                <a class="navbar-brand" @Html.ActionLink("Services","Support", "Home")>Support</a>
+
+>>>>>>> Stashed changes
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     @{
                         var result = Engine.FindView(ViewContext, "_LoginPartial", isMainPage: false);
